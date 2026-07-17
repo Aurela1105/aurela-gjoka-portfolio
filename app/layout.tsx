@@ -1,15 +1,49 @@
-import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'A modern portfolio website',
+  title: 'Aurela Gjoka - Frontend Developer',
+  description: 'Frontend developer portfolio showcasing modern, responsive web design projects using React, JavaScript, and Tailwind CSS.',
+  generator: 'v0.app',
+  icons: {
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
+  },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const viewport: Viewport = {
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body className="antialiased bg-background text-foreground">
+        {children}
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+      </body>
     </html>
   )
 }
