@@ -9,8 +9,8 @@ export function Projects() {
         'A responsive coffee shop website with menu, team section, reviews, and contact area.',
       technologies: ['HTML', 'CSS'],
       image: '☕',
-      demoLink: '#',
-      githubLink: '#',
+      demoLink: 'https://aurela1105.github.io/coffe-shop-website/#home',
+      githubLink: 'https://github.com/Aurela1105/coffe-shop-website',
     },
     {
       id: 2,
@@ -19,8 +19,8 @@ export function Projects() {
         'A modern responsive calculator built with JavaScript with full functionality.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       image: '🧮',
-      demoLink: '#',
-      githubLink: '#',
+      demoLink: 'https://ajajff10-hub.github.io/Calculator/',
+      githubLink: 'https://ajajff10-hub.github.io/Calculator/',
     },
     {
       id: 3,
@@ -29,8 +29,8 @@ export function Projects() {
         'A browser game with score tracking, obstacles, pause button, and mobile controls.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       image: '🦕',
-      demoLink: '#',
-      githubLink: '#',
+      demoLink: 'https://ajajff10-hub.github.io/Jumping-Game/',
+      githubLink: 'https://github.com/ajajff10-hub/Jumping-Game',
     },
     {
       id: 4,
@@ -54,13 +54,13 @@ export function Projects() {
     },
     {
       id: 6,
-      title: 'Movie Search App',
+      title: 'Math Website',
       description:
-        'A movie search app that displays movie details using an API integration.',
-      technologies: ['React', 'API'],
-      image: '🎬',
-      demoLink: '#',
-      githubLink: '#',
+        'An interactive mathematics website created to practice and demonstrate web development skills.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      image: '📐',
+      demoLink: 'https://aurela1105.github.io/math-website/',
+      githubLink: 'https://github.com/Aurela1105/math-website',
     },
   ];
 
@@ -68,6 +68,7 @@ export function Projects() {
     <section id="projects" className="py-20 px-4 md:px-6 bg-secondary/30">
       <div className="max-w-6xl mx-auto">
 
+        {/* Section Header */}
         <div className="text-center mb-16 animate-fadeInUp">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Featured Projects
@@ -81,6 +82,7 @@ export function Projects() {
           <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-6" />
         </div>
 
+        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div
@@ -88,7 +90,18 @@ export function Projects() {
               style={{ animationDelay: `${index * 75}ms` }}
               className="animate-fadeInUp"
             >
-              <div className="bg-white rounded-2xl overflow-hidden border border-border hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col h-full hover:-translate-y-2">
+              <div
+                onClick={() => {
+                  if (project.demoLink !== '#') {
+                    window.open(project.demoLink, '_blank');
+                  }
+                }}
+                className={`bg-white rounded-2xl overflow-hidden border border-border hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 ${
+                  project.demoLink !== '#'
+                    ? 'cursor-pointer'
+                    : ''
+                }`}
+              >
 
                 {/* Project Image */}
                 <div className="bg-gradient-to-br from-primary/20 to-accent/20 h-40 flex items-center justify-center text-6xl overflow-hidden">
@@ -128,17 +141,19 @@ export function Projects() {
                       href={project.demoLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="flex-1 bg-primary hover:bg-accent text-white py-2 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 transition-colors"
                     >
                       <ExternalLink size={16} />
                       Live Demo
                     </a>
 
-                    {/* GitHub Code */}
+                    {/* Code */}
                     <a
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="flex-1 border-2 border-primary text-primary hover:bg-secondary py-2 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 transition-colors"
                     >
                       <span>📝</span>
