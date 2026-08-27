@@ -1,37 +1,41 @@
+```tsx
 import { ExternalLink } from 'lucide-react';
 
 export function Projects() {
   const projects = [
     {
       id: 1,
+      title: 'Task Manager',
+      description:
+        'A task management application for organizing and managing daily tasks efficiently.',
+      technologies: ['Next.js', 'React', 'TypeScript'],
+      image: '✅',
+      demoLink: 'https://aurela1105.github.io/task-manager/',
+      githubLink: 'https://github.com/Aurela1105/task-manager.git',
+    },
+
+    {
+      id: 2,
       title: 'Coffee Shop Website',
       description:
         'A responsive coffee shop website with menu, team section, reviews, and contact area.',
       technologies: ['HTML', 'CSS'],
       image: '☕',
       demoLink: 'https://aurela1105.github.io/coffe-shop-website/#home',
-      githubLink: 'https://github.com/Aurela1105/coffe-shop-website',
+      githubLink: 'https://github.com/Aurela1105/coffe-shop-website.git',
     },
-    {
-      id: 2,
-      title: 'Calculator App',
-      description:
-        'A modern responsive calculator built with JavaScript with full functionality.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      image: '🧮',
-      demoLink: 'https://ajajff10-hub.github.io/Calculator/',
-      githubLink: 'https://ajajff10-hub.github.io/Calculator/',
-    },
+
     {
       id: 3,
-      title: 'Dino Jump Game',
+      title: 'BurgersWorld',
       description:
-        'A browser game with score tracking, obstacles, pause button, and mobile controls.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      image: '🦕',
-      demoLink: 'https://ajajff10-hub.github.io/Jumping-Game/',
-      githubLink: 'https://github.com/ajajff10-hub/Jumping-Game',
+        'A modern responsive burger restaurant website built with Next.js and React.',
+      technologies: ['Next.js', 'React', 'TypeScript'],
+      image: '🍔',
+      demoLink: 'https://aurela1105.github.io/burgersworld/',
+      githubLink: 'https://github.com/Aurela1105/burgersworld.git',
     },
+
     {
       id: 4,
       title: 'Weather App',
@@ -40,27 +44,40 @@ export function Projects() {
       technologies: ['Next.js', 'React', 'TypeScript', 'API'],
       image: '🌤️',
       demoLink: 'https://aurela1105.github.io/weather-application/',
-      githubLink: 'https://github.com/Aurela1105/weather-application',
+      githubLink: 'https://github.com/Aurela1105/weather-application.git',
     },
+
     {
       id: 5,
-      title: 'Todo App',
+      title: 'Calculator App',
       description:
-        'A task manager with add, delete, edit, filter, and local storage functionality.',
+        'A modern responsive calculator built with JavaScript with full functionality.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      image: '✅',
-      demoLink: '#',
-      githubLink: '#',
+      image: '🧮',
+      demoLink: 'https://ajajff10-hub.github.io/Calculator/',
+      githubLink: 'https://github.com/ajajff10-hub/Calculator.git',
     },
+
     {
       id: 6,
+      title: 'Dino Jump Game',
+      description:
+        'A browser game with score tracking, obstacles, pause button, and mobile controls.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      image: '🦕',
+      demoLink: 'https://ajajff10-hub.github.io/Jumping-Game/',
+      githubLink: 'https://github.com/ajajff10-hub/Jumping-Game.git',
+    },
+
+    {
+      id: 7,
       title: 'Math Website',
       description:
         'An interactive mathematics website created to practice and demonstrate web development skills.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       image: '📐',
       demoLink: 'https://aurela1105.github.io/math-website/',
-      githubLink: 'https://github.com/Aurela1105/math-website',
+      githubLink: 'https://github.com/Aurela1105/math-website.git',
     },
   ];
 
@@ -171,3 +188,4 @@ export function Projects() {
     </section>
   );
 }
+```
