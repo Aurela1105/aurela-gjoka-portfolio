@@ -7,13 +7,12 @@ export function Projects() {
       id: 1,
       title: 'Task Manager',
       description:
-        'A task management application for organizing and managing daily tasks efficiently.',
+        'A modern task manager application for creating, editing, completing, and organizing tasks.',
       technologies: ['Next.js', 'React', 'TypeScript'],
       image: '✅',
-      demoLink: 'https://aurela1105.github.io/task-manager/',
-      githubLink: 'https://github.com/Aurela1105/task-manager.git',
+      demoLink: '#',
+      githubLink: 'https://github.com/Aurela1105/task-manager',
     },
-
     {
       id: 2,
       title: 'Coffee Shop Website',
@@ -22,9 +21,8 @@ export function Projects() {
       technologies: ['HTML', 'CSS'],
       image: '☕',
       demoLink: 'https://aurela1105.github.io/coffe-shop-website/#home',
-      githubLink: 'https://github.com/Aurela1105/coffe-shop-website.git',
+      githubLink: 'https://github.com/Aurela1105/coffe-shop-website',
     },
-
     {
       id: 3,
       title: 'BurgersWorld',
@@ -32,10 +30,9 @@ export function Projects() {
         'A modern responsive burger restaurant website built with Next.js and React.',
       technologies: ['Next.js', 'React', 'TypeScript'],
       image: '🍔',
-      demoLink: 'https://aurela1105.github.io/burgersworld/',
-      githubLink: 'https://github.com/Aurela1105/burgersworld.git',
+      demoLink: '#',
+      githubLink: 'https://github.com/Aurela1105/burgersworld',
     },
-
     {
       id: 4,
       title: 'Weather App',
@@ -44,9 +41,8 @@ export function Projects() {
       technologies: ['Next.js', 'React', 'TypeScript', 'API'],
       image: '🌤️',
       demoLink: 'https://aurela1105.github.io/weather-application/',
-      githubLink: 'https://github.com/Aurela1105/weather-application.git',
+      githubLink: 'https://github.com/Aurela1105/weather-application',
     },
-
     {
       id: 5,
       title: 'Calculator App',
@@ -55,9 +51,8 @@ export function Projects() {
       technologies: ['HTML', 'CSS', 'JavaScript'],
       image: '🧮',
       demoLink: 'https://ajajff10-hub.github.io/Calculator/',
-      githubLink: 'https://github.com/ajajff10-hub/Calculator.git',
+      githubLink: 'https://github.com/ajajff10-hub/Calculator',
     },
-
     {
       id: 6,
       title: 'Dino Jump Game',
@@ -66,9 +61,8 @@ export function Projects() {
       technologies: ['HTML', 'CSS', 'JavaScript'],
       image: '🦕',
       demoLink: 'https://ajajff10-hub.github.io/Jumping-Game/',
-      githubLink: 'https://github.com/ajajff10-hub/Jumping-Game.git',
+      githubLink: 'https://github.com/ajajff10-hub/Jumping-Game',
     },
-
     {
       id: 7,
       title: 'Math Website',
@@ -77,14 +71,13 @@ export function Projects() {
       technologies: ['HTML', 'CSS', 'JavaScript'],
       image: '📐',
       demoLink: 'https://aurela1105.github.io/math-website/',
-      githubLink: 'https://github.com/Aurela1105/math-website.git',
+      githubLink: 'https://github.com/Aurela1105/math-website',
     },
   ];
 
   return (
     <section id="projects" className="py-20 px-4 md:px-6 bg-secondary/30">
       <div className="max-w-6xl mx-auto">
-
         {/* Section Header */}
         <div className="text-center mb-16 animate-fadeInUp">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -114,12 +107,9 @@ export function Projects() {
                   }
                 }}
                 className={`bg-white rounded-2xl overflow-hidden border border-border hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 ${
-                  project.demoLink !== '#'
-                    ? 'cursor-pointer'
-                    : ''
+                  project.demoLink !== '#' ? 'cursor-pointer' : ''
                 }`}
               >
-
                 {/* Project Image */}
                 <div className="bg-gradient-to-br from-primary/20 to-accent/20 h-40 flex items-center justify-center text-6xl overflow-hidden">
                   <span className="group-hover:scale-110 transition-transform duration-300">
@@ -129,7 +119,6 @@ export function Projects() {
 
                 {/* Project Content */}
                 <div className="p-6 flex flex-col flex-grow">
-
                   <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
@@ -152,7 +141,6 @@ export function Projects() {
 
                   {/* Buttons */}
                   <div className="flex gap-3">
-
                     {/* Live Demo */}
                     <a
                       href={project.demoLink}
@@ -176,14 +164,12 @@ export function Projects() {
                       <span>📝</span>
                       Code
                     </a>
-
                   </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
