@@ -1,4 +1,3 @@
-```tsx
 import { ExternalLink } from 'lucide-react';
 
 export function Projects() {
@@ -174,4 +173,3 @@ export function Projects() {
     </section>
   );
 }
-```
