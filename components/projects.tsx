@@ -4,14 +4,15 @@ export function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'Task Manager',
+      title: 'Todo App',
       description:
         'A modern task manager application for creating, editing, completing, and organizing tasks.',
       technologies: ['Next.js', 'React', 'TypeScript'],
       image: '✅',
-      demoLink: '#',
+      demoLink: 'https://aurela1105.github.io/task-manager/',
       githubLink: 'https://github.com/Aurela1105/task-manager',
     },
+
     {
       id: 2,
       title: 'Coffee Shop Website',
@@ -22,6 +23,7 @@ export function Projects() {
       demoLink: 'https://aurela1105.github.io/coffe-shop-website/#home',
       githubLink: 'https://github.com/Aurela1105/coffe-shop-website',
     },
+
     {
       id: 3,
       title: 'BurgersWorld',
@@ -29,9 +31,10 @@ export function Projects() {
         'A modern responsive burger restaurant website built with Next.js and React.',
       technologies: ['Next.js', 'React', 'TypeScript'],
       image: '🍔',
-      demoLink: '#',
+      demoLink: 'https://aurela1105.github.io/burgersworld/',
       githubLink: 'https://github.com/Aurela1105/burgersworld',
     },
+
     {
       id: 4,
       title: 'Weather App',
@@ -42,6 +45,7 @@ export function Projects() {
       demoLink: 'https://aurela1105.github.io/weather-application/',
       githubLink: 'https://github.com/Aurela1105/weather-application',
     },
+
     {
       id: 5,
       title: 'Calculator App',
@@ -52,6 +56,7 @@ export function Projects() {
       demoLink: 'https://ajajff10-hub.github.io/Calculator/',
       githubLink: 'https://github.com/ajajff10-hub/Calculator',
     },
+
     {
       id: 6,
       title: 'Dino Jump Game',
@@ -62,6 +67,7 @@ export function Projects() {
       demoLink: 'https://ajajff10-hub.github.io/Jumping-Game/',
       githubLink: 'https://github.com/ajajff10-hub/Jumping-Game',
     },
+
     {
       id: 7,
       title: 'Math Website',
@@ -75,8 +81,12 @@ export function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 md:px-6 bg-secondary/30">
+    <section
+      id="projects"
+      className="py-20 px-4 md:px-6 bg-secondary/30"
+    >
       <div className="max-w-6xl mx-auto">
+
         {/* Section Header */}
         <div className="text-center mb-16 animate-fadeInUp">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -92,23 +102,27 @@ export function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
           {projects.map((project, index) => (
             <div
               key={project.id}
-              style={{ animationDelay: `${index * 75}ms` }}
+              style={{
+                animationDelay: `${index * 75}ms`,
+              }}
               className="animate-fadeInUp"
             >
               <div
                 onClick={() => {
-                  if (project.demoLink !== '#') {
-                    window.open(project.demoLink, '_blank');
-                  }
+                  window.open(
+                    project.demoLink,
+                    '_blank',
+                    'noopener,noreferrer'
+                  );
                 }}
-                className={`bg-white rounded-2xl overflow-hidden border border-border hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 ${
-                  project.demoLink !== '#' ? 'cursor-pointer' : ''
-                }`}
+                className="bg-white rounded-2xl overflow-hidden border border-border hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 cursor-pointer"
               >
+
                 {/* Project Image */}
                 <div className="bg-gradient-to-br from-primary/20 to-accent/20 h-40 flex items-center justify-center text-6xl overflow-hidden">
                   <span className="group-hover:scale-110 transition-transform duration-300">
@@ -118,10 +132,13 @@ export function Projects() {
 
                 {/* Project Content */}
                 <div className="p-6 flex flex-col flex-grow">
+
+                  {/* Title */}
                   <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
 
+                  {/* Description */}
                   <p className="text-muted-foreground text-sm mb-4 flex-grow">
                     {project.description}
                   </p>
@@ -140,6 +157,7 @@ export function Projects() {
 
                   {/* Buttons */}
                   <div className="flex gap-3">
+
                     {/* Live Demo */}
                     <a
                       href={project.demoLink}
@@ -163,13 +181,16 @@ export function Projects() {
                       <span>📝</span>
                       Code
                     </a>
+
                   </div>
                 </div>
               </div>
             </div>
           ))}
+
         </div>
       </div>
     </section>
   );
 }
+```
