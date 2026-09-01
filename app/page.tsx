@@ -14,10 +14,10 @@ export default function Page() {
       <Navbar />
       <Hero />
       <About />
-      <Skills />
       <Projects />
       <Experience />
       <Certifications />
+      <Skills />
       <Contact />
       <Footer />
     </main>

@@ -114,7 +114,7 @@ export function Projects() {
             passion for web development.
           </p>
 
-          <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-6" />
+          <div className="w-16 h-1 bg-linear-to-r from-primary to-accent mx-auto rounded-full mt-6" />
         </div>
 
         {/* Projects Grid */}
@@ -140,19 +140,19 @@ export function Projects() {
                 }`}
               >
                 {/* Project Image */}
-                <div className="bg-gradient-to-br from-primary/20 to-accent/20 h-40 flex items-center justify-center text-6xl overflow-hidden">
+                <div className="bg-linear-to-br from-primary/20 to-accent/20 h-40 flex items-center justify-center text-6xl overflow-hidden">
                   <span className="group-hover:scale-110 transition-transform duration-300">
                     {project.image}
                   </span>
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6 flex flex-col grow">
                   <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="text-muted-foreground text-sm mb-4 flex-grow">
+                  <p className="text-muted-foreground text-sm mb-4 grow">
                     {project.description}
                   </p>
 

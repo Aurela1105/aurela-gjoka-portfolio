@@ -63,7 +63,7 @@ export function Hero() {
             <h2 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
               Hi, I&apos;m{' '}
 
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-primary to-accent bg-clip-text text-transparent">
                 Aurela
               </span>
             </h2>
@@ -115,7 +115,7 @@ export function Hero() {
 
               {/* Glow */}
 
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl animate-pulse" />
+              <div className="absolute inset-0 rounded-full bg-linear-to-br from-primary/20 to-accent/20 blur-2xl animate-pulse" />
 
               {/* Pulse ring */}
 
@@ -182,17 +182,17 @@ export function Hero() {
                 }}
               >
 
-                <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-primary to-accent opacity-30 blur-md" />
+                <div className="absolute -inset-2 rounded-full bg-linear-to-br from-primary to-accent opacity-30 blur-md" />
 
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-4 border-white/90 bg-background">
 
                   <img
-                    src="/aurela-gjoka-portfolio/ella.jpeg"
+                    src="/ella.jpeg"
                     alt="Aurela Gjoka"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />
 
                 </div>
 
@@ -239,7 +239,7 @@ export function Hero() {
 
               {/* Glow */}
 
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl animate-pulse" />
+              <div className="absolute inset-0 rounded-full bg-linear-to-br from-primary/20 to-accent/20 blur-2xl animate-pulse" />
 
               {/* Pulse ring */}
 

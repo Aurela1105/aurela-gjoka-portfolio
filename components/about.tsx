@@ -4,7 +4,7 @@ export function About() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 animate-fadeInUp">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">About Me</h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-linear-to-r from-primary to-accent mx-auto rounded-full" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
