@@ -187,7 +187,7 @@ export function Hero() {
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-4 border-white/90 bg-background">
 
                   <img
-                    src="/ella.jpeg"
+                    src="/aurela-gjoka-portfolio/ella.jpeg"
                     alt="Aurela Gjoka"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
