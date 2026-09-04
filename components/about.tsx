@@ -4,22 +4,22 @@ export function About() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 animate-fadeInUp">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">About Me</h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-linear-to-r from-primary to-accent mx-auto rounded-full" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="animate-slideInLeft space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I&apos;m a passionate frontend developer with a foundation in finance, bringing a unique perspective of organization and attention to detail to every project. I thrive on creating clean, intuitive, and responsive web experiences that users love.
+              Modern websites that combine clean design, smooth experiences, and responsive performance.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My journey into web development started with a desire to build beautiful digital solutions. I&apos;m constantly learning and improving my skills in modern web technologies, with a focus on React, JavaScript, and responsive design.
+              Passionate about building beautiful digital solutions and continuously growing my skills in React, JavaScript, and modern web technologies.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              When I&apos;m not coding, you&apos;ll find me exploring new design trends, contributing to open-source projects, or documenting my learning journey. I believe in writing clean code and creating user-centered designs that make a difference.
+              Clean code, thoughtful design, and user-focused experiences are at the heart of every website.
             </p>
 
             <div className="pt-4">

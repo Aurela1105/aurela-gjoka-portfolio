@@ -15,7 +15,7 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 px-4 md:px-6">
+    <section id="education" className="py-20 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
 
         {/* Section Header */}
@@ -31,7 +31,7 @@ export function Experience() {
             Education
           </h2>
 
-          <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-linear-to-r from-primary to-accent mx-auto rounded-full" />
         </div>
 
         {/* Education Cards */}
@@ -49,7 +49,7 @@ export function Experience() {
                 <div className="flex flex-col md:flex-row md:items-start gap-5">
 
                   {/* Icon */}
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
                       <GraduationCap
                         size={28}

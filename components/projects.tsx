@@ -1,8 +1,23 @@
 'use client';
 
 import { ExternalLink } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export function Projects() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const projects = [
     {
       id: 1,
@@ -16,7 +31,6 @@ export function Projects() {
       githubLink:
         'https://github.com/Aurela1105/beauty-salon-website',
     },
-
     {
       id: 2,
       title: 'Nest Real Estate Platform',
@@ -29,7 +43,6 @@ export function Projects() {
       githubLink:
         'https://github.com/Aurela1105/nest-real-estate-platform',
     },
-
     {
       id: 3,
       title: 'Math Website',
@@ -42,7 +55,6 @@ export function Projects() {
       githubLink:
         'https://github.com/Aurela1105/math-website',
     },
-
     {
       id: 4,
       title: 'Burger World',
@@ -55,7 +67,6 @@ export function Projects() {
       githubLink:
         'https://github.com/Aurela1105/burgersworld',
     },
-
     {
       id: 5,
       title: 'Coffee Shop Website',
@@ -68,7 +79,6 @@ export function Projects() {
       githubLink:
         'https://github.com/Aurela1105/coffe-shop-website',
     },
-
     {
       id: 6,
       title: 'Weather App',
@@ -81,7 +91,6 @@ export function Projects() {
       githubLink:
         'https://github.com/Aurela1105/weather-application',
     },
-
     {
       id: 7,
       title: 'Calculator App',
@@ -94,7 +103,6 @@ export function Projects() {
       githubLink:
         'https://github.com/ajajff10-hub/Calculator',
     },
-
     {
       id: 8,
       title: 'Dino Jump Game',
@@ -107,7 +115,6 @@ export function Projects() {
       githubLink:
         'https://github.com/ajajff10-hub/Jumping-Game',
     },
-
     {
       id: 9,
       title: 'Todo App',
@@ -154,7 +161,10 @@ export function Projects() {
               <div
                 onClick={() => {
                   if (project.demoLink !== '#') {
-                    window.open(project.demoLink, '_blank');
+                    window.open(
+                      project.demoLink,
+                      isMobile ? '_self' : '_blank'
+                    );
                   }
                 }}
                 className={`bg-white rounded-2xl overflow-hidden border border-border hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 ${
@@ -163,6 +173,7 @@ export function Projects() {
                     : ''
                 }`}
               >
+
                 {/* Project Image */}
                 <div className="bg-linear-to-br from-primary/20 to-accent/20 h-40 flex items-center justify-center text-6xl overflow-hidden">
                   <span className="group-hover:scale-110 transition-transform duration-300">
@@ -198,8 +209,12 @@ export function Projects() {
                     {/* Live Demo */}
                     <a
                       href={project.demoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={isMobile ? '_self' : '_blank'}
+                      rel={
+                        isMobile
+                          ? undefined
+                          : 'noopener noreferrer'
+                      }
                       onClick={(e) => e.stopPropagation()}
                       className="flex-1 bg-primary hover:bg-accent text-white py-2 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 transition-colors"
                     >
@@ -210,8 +225,12 @@ export function Projects() {
                     {/* Code */}
                     <a
                       href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={isMobile ? '_self' : '_blank'}
+                      rel={
+                        isMobile
+                          ? undefined
+                          : 'noopener noreferrer'
+                      }
                       onClick={(e) => e.stopPropagation()}
                       className="flex-1 border-2 border-primary text-primary hover:bg-secondary py-2 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 transition-colors"
                     >

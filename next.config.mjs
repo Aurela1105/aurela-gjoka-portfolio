@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
 
-  basePath: "/aurela-gjoka-portfolio",
-  assetPrefix: "/aurela-gjoka-portfolio/",
+const isProduction = process.env.NODE_ENV === 'production';
+
+const nextConfig = {
+  output: 'export',
+
+  basePath: isProduction ? '/aurela-gjoka-portfolio' : '',
+  assetPrefix: isProduction ? '/aurela-gjoka-portfolio/' : '',
 
   typescript: {
     ignoreBuildErrors: true,
