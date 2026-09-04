@@ -1,3 +1,4 @@
+'use client';
 
 import { ExternalLink } from 'lucide-react';
 
@@ -5,73 +6,117 @@ export function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'Todo App',
+      title: 'Maison Élise | Beauty Salon',
       description:
-        'A modern task manager application for creating, editing, completing, and organizing tasks.',
-      technologies: ['Next.js', 'React', 'TypeScript'],
-      image: '✅',
-      demoLink: 'https://aurela1105.github.io/task-manager/',
-      githubLink: 'https://github.com/Aurela1105/task-manager',
+        'A modern and elegant beauty salon website designed to showcase beauty services, treatments, and a premium salon experience.',
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+      image: '💄',
+      demoLink:
+        'https://aurela1105.github.io/beauty-salon-website/#home',
+      githubLink:
+        'https://github.com/Aurela1105/beauty-salon-website',
     },
+
     {
       id: 2,
-      title: 'Coffee Shop Website',
+      title: 'Nest Real Estate Platform',
       description:
-        'A responsive coffee shop website with menu, team section, reviews, and contact area.',
-      technologies: ['HTML', 'CSS'],
-      image: '☕',
-      demoLink: 'https://aurela1105.github.io/coffe-shop-website/#home',
-      githubLink: 'https://github.com/Aurela1105/coffe-shop-website',
+        'A modern real estate platform designed to showcase property listings with a clean, responsive, and user-friendly interface.',
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+      image: '🏡',
+      demoLink:
+        'https://aurela1105.github.io/nest-real-estate-platform/',
+      githubLink:
+        'https://github.com/Aurela1105/nest-real-estate-platform',
     },
+
     {
       id: 3,
-      title: 'BurgersWorld',
-      description:
-        'A modern responsive burger restaurant website built with Next.js and React.',
-      technologies: ['Next.js', 'React', 'TypeScript'],
-      image: '🍔',
-      demoLink: 'https://aurela1105.github.io/burgersworld/',
-      githubLink: 'https://github.com/Aurela1105/burgersworld',
-    },
-    {
-      id: 4,
-      title: 'Weather App',
-      description:
-        'A responsive weather application that displays current weather conditions and forecasts using a weather API.',
-      technologies: ['Next.js', 'React', 'TypeScript', 'API'],
-      image: '🌤️',
-      demoLink: 'https://aurela1105.github.io/weather-application/',
-      githubLink: 'https://github.com/Aurela1105/weather-application',
-    },
-    {
-      id: 5,
-      title: 'Calculator App',
-      description:
-        'A modern responsive calculator built with JavaScript with full functionality.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      image: '🧮',
-      demoLink: 'https://ajajff10-hub.github.io/Calculator/',
-      githubLink: 'https://github.com/ajajff10-hub/Calculator',
-    },
-    {
-      id: 6,
-      title: 'Dino Jump Game',
-      description:
-        'A browser game with score tracking, obstacles, pause button, and mobile controls.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      image: '🦕',
-      demoLink: 'https://ajajff10-hub.github.io/Jumping-Game/',
-      githubLink: 'https://github.com/ajajff10-hub/Jumping-Game',
-    },
-    {
-      id: 7,
       title: 'Math Website',
       description:
         'An interactive mathematics website created to practice and demonstrate web development skills.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       image: '📐',
-      demoLink: 'https://aurela1105.github.io/math-website/',
-      githubLink: 'https://github.com/Aurela1105/math-website',
+      demoLink:
+        'https://aurela1105.github.io/math-website/',
+      githubLink:
+        'https://github.com/Aurela1105/math-website',
+    },
+
+    {
+      id: 4,
+      title: 'Burger World',
+      description:
+        'A modern burger restaurant website with a stylish responsive interface, menu presentation, and interactive sections.',
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+      image: '🍔',
+      demoLink:
+        'https://aurela1105.github.io/burgersworld/',
+      githubLink:
+        'https://github.com/Aurela1105/burgersworld',
+    },
+
+    {
+      id: 5,
+      title: 'Coffee Shop Website',
+      description:
+        'A responsive coffee shop website with menu, team section, reviews, and contact area.',
+      technologies: ['HTML', 'CSS'],
+      image: '☕',
+      demoLink:
+        'https://aurela1105.github.io/coffe-shop-website/#home',
+      githubLink:
+        'https://github.com/Aurela1105/coffe-shop-website',
+    },
+
+    {
+      id: 6,
+      title: 'Weather App',
+      description:
+        'A responsive weather application that displays current weather conditions and forecasts using a weather API.',
+      technologies: ['Next.js', 'React', 'TypeScript', 'API'],
+      image: '🌤️',
+      demoLink:
+        'https://aurela1105.github.io/weather-application/',
+      githubLink:
+        'https://github.com/Aurela1105/weather-application',
+    },
+
+    {
+      id: 7,
+      title: 'Calculator App',
+      description:
+        'A modern responsive calculator built with JavaScript with full functionality.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      image: '🧮',
+      demoLink:
+        'https://ajajff10-hub.github.io/Calculator/',
+      githubLink:
+        'https://github.com/ajajff10-hub/Calculator',
+    },
+
+    {
+      id: 8,
+      title: 'Dino Jump Game',
+      description:
+        'A browser game with score tracking, obstacles, pause button, and mobile controls.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      image: '🦕',
+      demoLink:
+        'https://ajajff10-hub.github.io/Jumping-Game/',
+      githubLink:
+        'https://github.com/ajajff10-hub/Jumping-Game',
+    },
+
+    {
+      id: 9,
+      title: 'Todo App',
+      description:
+        'A task manager with add, delete, edit, filter, and local storage functionality.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      image: '✅',
+      demoLink: '#',
+      githubLink: '#',
     },
   ];
 
@@ -93,46 +138,45 @@ export function Projects() {
             passion for web development.
           </p>
 
-          <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-6" />
+          <div className="w-16 h-1 bg-linear-to-r from-primary to-accent mx-auto rounded-full mt-6" />
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
             <div
               key={project.id}
+              style={{
+                animationDelay: `${index * 75}ms`,
+              }}
               className="animate-fadeInUp"
             >
-              <div className="bg-white rounded-2xl overflow-hidden border border-border hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col h-full hover:-translate-y-2">
-
+              <div
+                onClick={() => {
+                  if (project.demoLink !== '#') {
+                    window.open(project.demoLink, '_blank');
+                  }
+                }}
+                className={`bg-white rounded-2xl overflow-hidden border border-border hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col h-full hover:-translate-y-2 ${
+                  project.demoLink !== '#'
+                    ? 'cursor-pointer'
+                    : ''
+                }`}
+              >
                 {/* Project Image */}
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gradient-to-br from-primary/20 to-accent/20 h-40 flex items-center justify-center text-6xl overflow-hidden cursor-pointer"
-                >
+                <div className="bg-linear-to-br from-primary/20 to-accent/20 h-40 flex items-center justify-center text-6xl overflow-hidden">
                   <span className="group-hover:scale-110 transition-transform duration-300">
                     {project.image}
                   </span>
-                </a>
+                </div>
 
                 {/* Project Content */}
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6 flex flex-col grow">
+                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
 
-                  {/* Title */}
-                  <a
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                  </a>
-
-                  {/* Description */}
-                  <p className="text-muted-foreground text-sm mb-4 flex-grow">
+                  <p className="text-muted-foreground text-sm mb-4 grow">
                     {project.description}
                   </p>
 
@@ -151,20 +195,24 @@ export function Projects() {
                   {/* Buttons */}
                   <div className="flex gap-3">
 
+                    {/* Live Demo */}
                     <a
                       href={project.demoLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="flex-1 bg-primary hover:bg-accent text-white py-2 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 transition-colors"
                     >
                       <ExternalLink size={16} />
                       Live Demo
                     </a>
 
+                    {/* Code */}
                     <a
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="flex-1 border-2 border-primary text-primary hover:bg-secondary py-2 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 transition-colors"
                     >
                       <span>📝</span>
